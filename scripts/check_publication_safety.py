@@ -54,7 +54,7 @@ def main() -> int:
         except UnicodeDecodeError:
             continue
         for line_no, line in enumerate(text.splitlines(), 1):
-            if "your_" in line or line.strip().startswith("- "):
+            if "your_" in line:
                 continue
             for label, pattern in PATTERNS:
                 if pattern.search(line):
