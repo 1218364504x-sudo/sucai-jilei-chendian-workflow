@@ -16,7 +16,7 @@
 10. 正式入库前过四道门：人物门、关系门、时间门、影像门。
 
 输出要求：
-1. 标题必须像一个可拍瞬间，从动作、声音、道具、关系代价或结尾余味里提取。
+1. 标题必须和简介一样走完整流水线：外文/非中国素材走 `stop-slop -> humanizer -> DeepSeek Pro -> shuorenhua`；中国素材走 `DeepSeek Pro -> shuorenhua`。标题要像一个可拍瞬间，从动作、声音、道具、关系代价或结尾余味里提取，并留下标题审计记录。
 2. 故事简介必须是一段完整故事，包含人物、时间、地点、发生了什么、后来怎样、具体结果。
 3. 国外/非中国素材简介必须走 `stop-slop -> humanizer -> DeepSeek Pro -> shuorenhua`：先用两个英文去 AI 味 skill 清理事实资料，再由 DeepSeek Pro 重写中文故事简介，最后用 `shuorenhua` 做中文验收。中国素材默认走 `DeepSeek Pro -> shuorenhua`。
 4. DeepSeek 重写必须留下可查询审计记录；没有审计记录，不要声称已经由 DeepSeek 重写。翻译腔、评论式末句和词表命中只作为质量提醒，不作为机械拦截。
